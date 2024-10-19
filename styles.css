@@ -9,23 +9,22 @@ body {
 }
 
 header {
-    text-align: center;
+   text-align: center;
     padding: 50px 20px; /* Adjust padding as needed */
-    color: #ffffff;
+    color: #cfc190;
     background-size: cover; /* Maintain cover size */
     background-position: center; 
-     /* Your cover image */
+    background-color:#a5003f; /* Your cover image */
     height: 480px; /* Set desired height for longer cover */
-    background-color: #ff00ff;
 }
 .cover {
-    display: flex;               /* Use flexbox */
+   display: flex;               /* Use flexbox */
     flex-direction: column;      /* Stack children vertically */
     justify-content: center;     /* Center content vertically */
     align-items: center;         /* Center content horizontally */
     height: 80vhvh;              /* Full viewport height */
     text-align: center;          /* Center text */
-    background-color: #f0f0f0;  /* Optional: set a background color */
+    background-color: #77002e;  /* Optional: set a background color */
    font-family: Georgia, 'Times New Roman', Times, serif;
 margin-bottom: 40px;
 }
