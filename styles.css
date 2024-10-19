@@ -5,7 +5,8 @@ body {
     padding: 0;
     line-height: 1.6;
     padding-top: 60px; /* Adjust depending on the navbar height */
-    background-color: #cfc190;}
+    background-color: #ff00ff;
+}
 
 header {
     text-align: center;
