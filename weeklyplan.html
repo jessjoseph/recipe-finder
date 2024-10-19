@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Meal Planner</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="find-recipe.html">Find Recipe</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                </div>
+            </li>
+         
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="signin.html">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main Weekly Meal Planner Section -->
+    <main id="weekly-meal-planner">
+        <h2>Plan Your Meals for the Week</h2>
+
+        <section class="week-planner">
+            <!-- Monday -->
+            <div class="day">
+                
+                <div class="day-content">
+                    <h3>Monday</h3>
+                    <textarea id="monday-plan" placeholder="Enter meal plan for Monday"></textarea>
+                </div>
+            </div>
+            <!-- Tuesday -->
+            <div class="day">
+               
+                <div class="day-content">
+                    <h3>Tuesday</h3>
+                    <textarea id="tuesday-plan" placeholder="Enter meal plan for Tuesday"></textarea>
+                </div>
+            </div>
+            <!-- Wednesday -->
+            <div class="day">
+              
+                <div class="day-content">
+                    <h3>Wednesday</h3>
+                    <textarea id="wednesday-plan" placeholder="Enter meal plan for Wednesday"></textarea>
+                </div>
+            </div>
+            <!-- Thursday -->
+            <div class="day">
+               
+                <div class="day-content">
+                    <h3>Thursday</h3>
+                    <textarea id="thursday-plan" placeholder="Enter meal plan for Thursday"></textarea>
+                </div>
+            </div>
+            <!-- Friday -->
+            <div class="day">
+                
+                <div class="day-content">
+                    <h3>Friday</h3>
+                    <textarea id="friday-plan" placeholder="Enter meal plan for Friday"></textarea>
+                </div>
+            </div>
+            <!-- Saturday -->
+            <div class="day">
+               
+                <div class="day-content">
+                    <h3>Saturday</h3>
+                    <textarea id="saturday-plan" placeholder="Enter meal plan for Saturday"></textarea>
+                </div>
+            </div>
+            <!-- Sunday -->
+            <div class="day">
+                
+                <div class="day-content">
+                    <h3>Sunday</h3>
+                    <textarea id="sunday-plan" placeholder="Enter meal plan for Sunday"></textarea>
+                </div>
+            </div>
+        </section>
+        
+        <button id="save-week-plan-btn">Save Weekly Plan</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder</p>
+    </footer>
+
+    <script>
+
+
+// Function to save weekly meal plan to localStorage
+function saveWeeklyPlan() {
+    const mondayPlan = document.getElementById('monday-plan').value;
+    const tuesdayPlan = document.getElementById('tuesday-plan').value;
+    const wednesdayPlan = document.getElementById('wednesday-plan').value;
+    const thursdayPlan = document.getElementById('thursday-plan').value;
+    const fridayPlan = document.getElementById('friday-plan').value;
+    const saturdayPlan = document.getElementById('saturday-plan').value;
+    const sundayPlan = document.getElementById('sunday-plan').value;
+
+    // Store the meal plans for each day in localStorage
+    localStorage.setItem('mondayPlan', mondayPlan);
+    localStorage.setItem('tuesdayPlan', tuesdayPlan);
+    localStorage.setItem('wednesdayPlan', wednesdayPlan);
+    localStorage.setItem('thursdayPlan', thursdayPlan);
+    localStorage.setItem('fridayPlan', fridayPlan);
+    localStorage.setItem('saturdayPlan', saturdayPlan);
+    localStorage.setItem('sundayPlan', sundayPlan);
+
+    alert('Weekly meal plan saved!');
+}
+
+// Function to load saved weekly meal plan from localStorage
+function loadWeeklyPlan() {
+    const savedMondayPlan = localStorage.getItem('mondayPlan');
+    const savedTuesdayPlan = localStorage.getItem('tuesdayPlan');
+    const savedWednesdayPlan = localStorage.getItem('wednesdayPlan');
+    const savedThursdayPlan = localStorage.getItem('thursdayPlan');
+    const savedFridayPlan = localStorage.getItem('fridayPlan');
+    const savedSaturdayPlan = localStorage.getItem('saturdayPlan');
+    const savedSundayPlan = localStorage.getItem('sundayPlan');
+
+    // If there are saved meal plans, populate the text areas
+    if (savedMondayPlan) document.getElementById('monday-plan').value = savedMondayPlan;
+    if (savedTuesdayPlan) document.getElementById('tuesday-plan').value = savedTuesdayPlan;
+    if (savedWednesdayPlan) document.getElementById('wednesday-plan').value = savedWednesdayPlan;
+    if (savedThursdayPlan) document.getElementById('thursday-plan').value = savedThursdayPlan;
+    if (savedFridayPlan) document.getElementById('friday-plan').value = savedFridayPlan;
+    if (savedSaturdayPlan) document.getElementById('saturday-plan').value = savedSaturdayPlan;
+    if (savedSundayPlan) document.getElementById('sunday-plan').value = savedSundayPlan;
+}
+
+// Add event listener to save button
+document.getElementById('save-week-plan-btn').addEventListener('click', saveWeeklyPlan);
+
+// Load the saved weekly meal plan when the page loads
+window.onload = loadWeeklyPlan;
+
+    </script>
+</body>
+</html>
+

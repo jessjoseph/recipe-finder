@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Meal Planner</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your stylesheet -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="find-recipe.html">Find Recipe</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                </div>
+            </li>
+            
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="signin.html">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- Main Daily Meal Planner Section -->
+    <main id="daily-meal-planner">
+        <h2>Plan Your Meals for Today</h2>
+
+        <section class="day-planner">
+            <!-- Breakfast -->
+            <div class="meal">
+                <div class="meal-content">
+                    <h3>Breakfast</h3>
+                    <textarea id="breakfast-plan" placeholder="Enter your breakfast plan"></textarea>
+                </div>
+            </div>
+            <!-- Lunch -->
+            <div class="meal">
+                <div class="meal-content">
+                    <h3>Lunch</h3>
+                    <textarea id="lunch-plan" placeholder="Enter your lunch plan"></textarea>
+                </div>
+            </div>
+            <!-- Dinner -->
+            <div class="meal">
+                <div class="meal-content">
+                    <h3>Dinner</h3>
+                    <textarea id="dinner-plan" placeholder="Enter your dinner plan"></textarea>
+                </div>
+            </div>
+        </section>
+        
+
+        <button id="save-today-plan-btn">Save Today's Plan</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder</p>
+    </footer>
+
+    <script>
+        // daily-plan.js
+
+// Function to save today's meal plan to localStorage
+function saveMealPlan() {
+    const breakfast = document.getElementById('breakfast-plan').value;
+    const lunch = document.getElementById('lunch-plan').value;
+    const dinner = document.getElementById('dinner-plan').value;
+
+    // Store the meal plan in localStorage
+    localStorage.setItem('breakfastPlan', breakfast);
+    localStorage.setItem('lunchPlan', lunch);
+    localStorage.setItem('dinnerPlan', dinner);
+
+    alert('Meal plan saved for today!');
+}
+
+// Function to load saved meal plan from localStorage
+function loadMealPlan() {
+    const savedBreakfast = localStorage.getItem('breakfastPlan');
+    const savedLunch = localStorage.getItem('lunchPlan');
+    const savedDinner = localStorage.getItem('dinnerPlan');
+
+    // If there are saved meal plans, populate the text areas
+    if (savedBreakfast) document.getElementById('breakfast-plan').value = savedBreakfast;
+    if (savedLunch) document.getElementById('lunch-plan').value = savedLunch;
+    if (savedDinner) document.getElementById('dinner-plan').value = savedDinner;
+}
+
+// Add event listener to save button
+document.getElementById('save-today-plan-btn').addEventListener('click', saveMealPlan);
+
+// Load the saved meal plan when the page loads
+window.onload = loadMealPlan;
+
+    </script> <!-- Add functionality in the external JS file -->
+</body>
+</html>

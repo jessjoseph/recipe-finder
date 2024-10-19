@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Recipe - Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="find-recipe.html">Find Recipe</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                </div>
+            </li>
+          
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="signin.html">Login</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <section id="find-recipe-section">
+            <h2>Discover New Recipes</h2>
+            <input type="text" id="search-query" placeholder="Search recipes...">
+            <input type="text" id="ingredient-input" placeholder="Input ingredients (comma separated)...">
+            <button id="search-btn">Search Recipes</button>
+
+            <div id="filters">
+                <label for="diet-filter">Diet: </label>
+                <select id="diet-filter">
+                    <option value="">Any</option>
+                    <option value="balanced">Balanced</option>
+                    <option value="high-protein">High-Protein</option>
+                    <option value="low-fat">Low-Fat</option>
+                    <option value="low-carb">Low-Carb</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="paleo">Paleo</option>
+                    <option value="gluten-free">Gluten-Free</option>
+                </select>
+                
+            </div>
+
+            <div id="recipe-container"></div>
+          
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

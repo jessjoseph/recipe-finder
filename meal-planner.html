@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner - Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="find-recipe.html">Find Recipe</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                </div>
+            </li>
+            
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="signin.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        
+          <!-- Plan for Today and Week Buttons -->
+<section id="meal-planner-section">
+    <h2>Meal Planner</h2>
+
+    <!-- Plan for Today Button -->
+    <a href="plantoday.html" id="daily-plan-btn" class="btn">Plan for Today</a>
+    
+    <!-- Plan for Week Button (Link) -->
+    <a href="weeklyplan.html" id="weekly-plan-btn" class="btn">Plan for the Week</a>
+
+    <div id="meal-plan-container"></div>
+    
+    <!-- Generate Grocery List Button (Link) -->
+    <a href="grocerylist.html" id="grocery-list-btn" class="btn">Create Grocery List</a>
+    
+    <div id="grocery-list"></div>
+</section>
+
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder</p>
+    </footer>
+
+    <script src="meal-planner.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Updated link -->
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore</a>
+                <div class="dropdown-content">
+                    <a href="find-recipe.html">Find Recipe</a>
+                    <a href="meal-planner.html">Meal Planner</a>
+                </div>
+            </li>
+            
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="signin.html">Login</a></li>
+            
+        </ul>
+    </nav>
+
+    <!-- Cover Section -->
+    <header class="cover">
+        <h1>Welcome to Recipe Finder</h1>
+        <p>Find the best recipes tailored to your needs</p>
+    </header>
+    
+    <main>
+        <!-- Section with image on the left for "Find Recipe" -->
+        <section id="find-recipe-section">
+            <div class="info-with-image">
+                <img src="images/recipe-image.jpg" alt="Recipe Image">
+                <div class="info-text">
+                    <h2>Discover New Recipes</h2>
+                    <p>Browse through a wide variety of recipes suited to your dietary preferences and taste. Whether you're looking for something vegan, gluten-free, or simply delicious, we have the perfect recipe for you.</p>
+                    <a href="find-recipe.html" class="btn">Find Recipes</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meal Planner Section with image on the right -->
+        <section id="meal-planner-section">
+            <div class="info-with-image">
+                <div class="info-text">
+                    <h2>Meal Planner</h2>
+                    <p>Plan your meals for the week and organize your shopping list easily.</p>
+                    <a href="meal-planner.html" class="btn">Start Planning</a>
+                </div>
+                <img src="images/meal-planner-image.jpg" alt="Meal Planner Image">
+            </div>
+           
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder</p>
+    </footer>
+</body>
+</html>
+
