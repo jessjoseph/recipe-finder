@@ -14,8 +14,9 @@ header {
     color: #ffffff;
     background-size: cover; /* Maintain cover size */
     background-position: center; 
-    background-image: url('newcover.jpg'); /* Your cover image */
+     /* Your cover image */
     height: 480px; /* Set desired height for longer cover */
+    background-color: #ff00ff;
 }
 .cover {
     display: flex;               /* Use flexbox */
